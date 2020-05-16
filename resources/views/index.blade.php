@@ -15,7 +15,7 @@
 
     {!! Admin::css() !!}
 
-    <script src="{{ Admin::jQuery() }}"></script>
+    <script nonce="{{ csp_nonce() }}" src="{{ Admin::jQuery() }}"></script>
     {!! Admin::headerJs() !!}
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -53,7 +53,7 @@
 
 <button id="totop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up"></i></button>
 
-<script>
+<script nonce="{{ csp_nonce() }}">
     function LA() {}
     LA.token = "{{ csrf_token() }}";
     LA.user = @json($_user_);
