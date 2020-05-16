@@ -92,7 +92,7 @@ trait HasAssets
     /**
      * @var string
      */
-    public static $jQuery = 'vendor/laravel-admin/AdminLTE/plugins/jQuery/jquery-3.5.1.js';
+    public static $jQuery = 'vendor/laravel-admin/AdminLTE/plugins/jQuery/jquery-3.5.1.min.js';
 
     /**
      * @var array
