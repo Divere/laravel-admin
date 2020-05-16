@@ -5,7 +5,7 @@
         $message    = \Illuminate\Support\Arr::get($toastr->get('message'), 0, '');
         $options    = json_encode($toastr->get('options', []));
     @endphp
-    <script>
+    <script nonce="{{ csp_nonce() }}">
         $(function () {
             toastr.{{$type}}('{!!  $message  !!}', null, {!! $options !!});
         });
