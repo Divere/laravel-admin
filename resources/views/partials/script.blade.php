@@ -1,4 +1,4 @@
-<script data-exec-on-popstate>
+<script nonce="{{ csp_nonce() }}" data-exec-on-popstate>
 
     $(function () {
         @foreach($script as $s)
