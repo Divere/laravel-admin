@@ -15,7 +15,8 @@
 
     {!! Admin::css() !!}
 
-    <script nonce="{{ csp_nonce() }}" src="{{ Admin::jQuery() }}"></script>
+    <script src="{{ Admin::jQuery() }}"></script>
+    <script src="{{ Admin::jQueryMigrate() }}"></script>
     {!! Admin::headerJs() !!}
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -27,7 +28,7 @@
 <body class="hold-transition {{config('admin.skin')}} {{join(' ', config('admin.layout'))}}">
 
 @if($alert = config('admin.top_alert'))
-    <div style="text-align: center;padding: 5px;font-size: 12px;background-color: #ffffd5;color: #ff0000;">
+    <div style="text-align: center;padding: 5px;font-size: 12px;background-color: #ffffd5;color: #ff0000;">cd
         {!! $alert !!}
     </div>
 @endif
