@@ -214,7 +214,6 @@ class ResourceGenerator
      */
     protected function getTableColumns()
     {
-
         $table = $this->model->getConnection()->getTablePrefix().$this->model->getTable();
 
         return Schema::getColumns($table);
