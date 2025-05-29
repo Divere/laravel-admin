@@ -16,8 +16,8 @@ class ResourceGenerator
      * @var array
      */
     protected $formats = [
-        'form_field'  => "\$form->%s('%s', __('%s'))",
-        'show_field'  => "\$show->field('%s', __('%s'))",
+        'form_field' => "\$form->%s('%s', __('%s'))",
+        'show_field' => "\$show->field('%s', __('%s'))",
         'grid_column' => "\$grid->column('%s', __('%s'))",
     ];
 
@@ -36,14 +36,14 @@ class ResourceGenerator
      * @var array
      */
     protected $fieldTypeMapping = [
-        'ip'       => 'ip',
-        'email'    => 'email|mail',
+        'ip' => 'ip',
+        'email' => 'email|mail',
         'password' => 'password|pwd',
-        'url'      => 'url|link|src|href',
-        'mobile'   => 'mobile|phone',
-        'color'    => 'color|rgb',
-        'image'    => 'image|img|avatar|pic|picture|cover',
-        'file'     => 'file|attachment',
+        'url' => 'url|link|src|href',
+        'mobile' => 'mobile|phone',
+        'color' => 'color|rgb',
+        'image' => 'image|img|avatar|pic|picture|cover',
+        'file' => 'file|attachment',
     ];
 
     /**
@@ -208,13 +208,13 @@ class ResourceGenerator
     /**
      * Get columns of a giving model.
      *
+     * @return \Doctrine\DBAL\Schema\Column[]
      * @throws \Exception
      *
-     * @return \Doctrine\DBAL\Schema\Column[]
      */
     protected function getTableColumns()
     {
-        $table = $this->model->getConnection()->getTablePrefix().$this->model->getTable();
+        $table = $this->model->getConnection()->getTablePrefix() . $this->model->getTable();
 
         return Schema::getColumns($table);
     }
